@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-boilerplate": {
+    "streaminstruments-dashboard": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-boilerplate",
+            "outputPath": "dist/streaminstruments-dashboard",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,7 +70,7 @@
               "browserTarget": "test:build:production"
             },
             "development": {
-              "browserTarget": "angular-boilerplate:build:development"
+              "browserTarget": "streaminstruments-dashboard:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -96,5 +96,5 @@
       }
     }
   },
-  "defaultProject": "angular-boilerplate"
+  "defaultProject": "streaminstruments-dashboard"
 }

@@ -17,11 +17,6 @@ const APP_ROUTES: Routes = [
     canLoad: [NoAuthGuard],
   },
   {
-    path: ROUTER_UTILS.config.base.home,
-    loadChildren: async () =>
-      (await import('@pages/home/home.module')).HomeModule,
-  },
-  {
     path: ROUTER_UTILS.config.base.dashboard,
     loadChildren: async () =>
       (await import('@pages/dashboard/dashboard.module')).DashboardModule,
@@ -31,12 +26,6 @@ const APP_ROUTES: Routes = [
     path: ROUTER_UTILS.config.settings.root,
     loadChildren: async () =>
       (await import('@pages/settings/settings.module')).SettingsModule,
-    canLoad: [AuthGuard],
-  },
-  {
-    path: ROUTER_UTILS.config.user.root,
-    loadChildren: async () =>
-      (await import('@pages/user/user.module')).UserModule,
     canLoad: [AuthGuard],
   },
   {

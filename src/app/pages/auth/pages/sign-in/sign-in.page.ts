@@ -17,7 +17,7 @@ export class SignInPage {
   ) {
     this.returnUrl =
       this.activatedRoute.snapshot.queryParamMap.get('returnUrl') ||
-      `/${ROUTER_UTILS.config.base.home}`;
+      `/${ROUTER_UTILS.config.base.dashboard}`;
   }
 
   onClickSignIn(): void {
