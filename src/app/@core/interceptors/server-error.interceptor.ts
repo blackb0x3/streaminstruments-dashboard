@@ -3,7 +3,7 @@ import {
   HttpEvent,
   HttpHandler,
   HttpInterceptor,
-  HttpRequest,
+  HttpRequest
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
@@ -23,12 +23,12 @@ export class ServerErrorInterceptor implements HttpInterceptor {
       catchError((error: HttpErrorResponse) => {
         if ([401, 403].includes(error.status)) {
           this.router.navigateByUrl(ROUTER_UTILS.config.auth.signIn);
-          return throwError(error);
+          return throwError(() => error);
         } else if (error.status === 500) {
           console.error(error);
-          return throwError(error);
+          return throwError(() => error);
         } else {
-          return throwError(error);
+          return throwError(() => error);
         }
       }),
     );
